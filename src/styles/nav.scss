@@ -2,9 +2,12 @@
   line-height: 60px;
 
   &__list {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    justify-content: end;
+    grid-template-columns: repeat(8,1fr);
+    
     list-style: none;
+    white-space: nowrap;
   }
 
   &__link {

@@ -1,8 +1,11 @@
 .rows {
-  @include position;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  justify-content: space-between;
+
   padding: 0 40px;
   margin: 0 auto;
   max-width: 1024px;
+  
   font-family: $font-style;
 }

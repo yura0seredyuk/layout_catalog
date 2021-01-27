@@ -2,13 +2,16 @@
   width: 200px;
   padding: 30px 14px 15px;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
   align-items: center;
 
   background: $color-background;
   border: $card-border-color;
   border-radius: 5px;
+
+  &__photo {
+    justify-self: center;
+  }
 
   &__img {
     display: block;
@@ -25,14 +28,16 @@
   }
 
   &__code {
-    align-self: flex-start;
+    align-self: start;
     margin-top: 5px;
     font-size: 11px;
     line-height: 13px;
   }
   
   &__reaction {
-    @include position;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
     width: 100%;
     margin-top: 15px;
     align-items: center;
@@ -41,12 +46,13 @@
   &__comment {
     font-size: 11px;
     line-height: 13px;
+    justify-self: end;
   }
 
   &__price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
 
     width: 100%;
     margin-top: 20px;
@@ -59,6 +65,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 19px;
+    justify-self: end;
   }
 
   &__link {
